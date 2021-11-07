@@ -1,11 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
-import font from '../public/font/misaki_gothic.ttf';
+import font from '../public/font/PressStart2P-Regular.woff';
 import { mediaQueries } from './utils/mediaQueries';
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
+  @import url("https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed|Questrial");
+
   @font-face {
+    font-family: Stratum;
     font-display: auto;
     src: url('${font}');
   }
