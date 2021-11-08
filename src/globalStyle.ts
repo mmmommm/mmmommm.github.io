@@ -1,19 +1,18 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
-import font from '../public/font/PressStart2P-Regular.woff';
 import { mediaQueries } from './utils/mediaQueries';
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
-  @import url("https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed|Questrial");
 
   @font-face {
-    font-family: Stratum;
+    font-family: PressStart;
     font-display: auto;
-    src: url('${font}');
+    src: url('../public/font/PressStart2P-Regular.woff') format("woff"),
+         url('../public/font/PressStart2P-Regular.ttf') format("truetype")
   }
   html {
-    font-family: Stratum, "Helvetica Neue For Number", "Hiragino Kaku Gothic ProN", "メイリオ", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: PressStart "Helvetica Neue For Number", "Hiragino Kaku Gothic ProN", "メイリオ", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 62.5%;
     ${mediaQueries.smartphone`
       font-size: 50.5%;
