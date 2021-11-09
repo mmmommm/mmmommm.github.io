@@ -1,13 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { Container as ContainerComponent } from '../Container';
-import { mainColor, blackColor } from '../../variables';
+import { mainColor, whiteColor, blackColor } from '../../variables';
 import { Link } from '../atoms/Link';
 import { Flame } from '../Flame';
 
 const Container = styled(ContainerComponent)`
-  background: #fff;
-  flex-direction: column;
+  background: ${blackColor};
 `
 
 const SNS = styled.div`
@@ -21,7 +20,7 @@ const P = styled.p`
 `;
 
 const H3 = styled.h3`
-  color: ${blackColor};
+  color: ${whiteColor};
 `;
 
 export const Profile: React.VFC = () => {
@@ -48,7 +47,6 @@ export const Profile: React.VFC = () => {
     { url: "https://twitter.com/kissessenose", service: "Twitter" },
     { url: "https://github.com/mmmommm", service: "Github" },
   ]
-  const avatar = ""
   return (
     <Container className="profile">
       <Flame
@@ -59,7 +57,7 @@ export const Profile: React.VFC = () => {
             <>
               <H3>Ryota Kise / 21 yo</H3>
               <P>- A Web engineer</P>
-              <P>- Interested in web front-end optimization now</P>
+              <P>- Interested in web front-end optimization and Javascript AST</P>
               <H3>Contact</H3>
               <P>- omotenashikyoto2020[at]gmail.com</P>
               <H3>SNS</H3>

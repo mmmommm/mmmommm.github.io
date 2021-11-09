@@ -1,6 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { mediaQueries } from '../../utils/mediaQueries';
+import { whiteColor } from '../../variables';
+import { Petal1, Petal2 } from '../animation/sakura';
+import { Container } from '../Container';
 
 export interface Props {
   title: string;
@@ -14,10 +17,13 @@ export interface Props {
   };
 }
 
-const Box = styled.div`
+const Box = styled(Container)`
+  color: ${whiteColor};
+  position: relative;
   display: flex;
-  padding: 16px 0;
+  padding: 20px 0;
   width: 80%;
+  overflow: hidden;
 
   ${mediaQueries.pcSize`
     flex-direction: column;
@@ -31,7 +37,7 @@ const Section = styled.section`
   max-size: 50%;
 
   ${mediaQueries.pcSize`
-    max-width: 100%%;
+    max-width: 100%;
   `};
 `;
 
@@ -49,8 +55,15 @@ const SectionBox = styled.div`
 
 export const Flame: React.FC<Props> = ({ title, left, right }) => (
   <>
-    <h2>{title}</h2>
-    <Box>
+    <Box className="Hero">
+      <div>
+        {[...Array(29)].map((_, i) => (
+          <Petal1 key={i} />
+        ))}
+        {[...Array(29)].map((_, i) => (
+          <Petal2 key={i} />
+        ))}
+      </div>
       <Section>
         <SectionTitle>{left.title}</SectionTitle>
         <SectionBox className="transition">{left.children}</SectionBox>
