@@ -4,15 +4,10 @@ import { mediaQueries } from './utils/mediaQueries';
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-  @font-face {
-    font-family: PressStart;
-    font-display: auto;
-    src: url('../public/font/PressStart2P-Regular.woff') format("woff"),
-         url('../public/font/PressStart2P-Regular.ttf') format("truetype")
-  }
   html {
-    font-family: PressStart "Helvetica Neue For Number", "Hiragino Kaku Gothic ProN", "メイリオ", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Press Start 2P";
     font-size: 62.5%;
     ${mediaQueries.smartphone`
       font-size: 50.5%;
@@ -40,6 +35,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   p {
     margin: 12px 0;
+    z-index: 3;
   }
   a {
     text-decoration: none;
