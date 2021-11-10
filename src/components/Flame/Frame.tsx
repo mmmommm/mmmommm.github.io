@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { mediaQueries } from '../../utils/mediaQueries';
 import { whiteColor } from '../../variables';
-import { Petal1, Petal2 } from '../animation/sakura';
+import { Petal } from '../animation/sakura';
 import { Container } from '../Container';
 
 export interface Props {
@@ -58,10 +58,7 @@ export const Flame: React.FC<Props> = ({ title, left, right }) => (
     <Box className="Hero">
       <div>
         {[...Array(29)].map((_, i) => (
-          <Petal1 key={i} />
-        ))}
-        {[...Array(29)].map((_, i) => (
-          <Petal2 key={i} />
+          <Petal key={i} />
         ))}
       </div>
       <Section>

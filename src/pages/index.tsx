@@ -12,8 +12,8 @@ const Index: React.VFC = () => {
     <>
       <Head title={title} description={description} />
       <App>
-        <Profile />
         <Background />
+        <Profile />
       </App>
     </>
   );

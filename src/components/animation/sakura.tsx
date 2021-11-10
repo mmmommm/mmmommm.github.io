@@ -5,9 +5,10 @@ import { sakuraColor } from '../../variables';
 
 const petalAnimation = keyframes`
   0% {
+    z-index: 1;
     background-color: ${sakuraColor};
-    width: 6px;
-    height:6px;
+    width: 12px;
+    height:12px;
     box-shadow: 0px 0px 20px ${sakuraColor};
   }
   20% {
@@ -27,26 +28,25 @@ const petalAnimation = keyframes`
   }
 `;
 
-const Petal = styled.i`
+export const Petal = styled.i`
+  z-index: 1;
   color: ${sakuraColor};
   position: absolute;
-  height: 6px;
-  width: 6px;
-  box-shadow: 0px 0px 20px ${sakuraColor};
+  height: 12px;
+  width: 12px;
   animation-name: ${petalAnimation};
   animation-delay: ${() => `${getRandomInt(0, 30)}s`};
   animation-duration: 10s;
   animation-iteration-count: infinite;
-  opacity: 1;
   left: ${() => `calc(${getRandomInt(0, 100)} * 1%)`};
   top: ${() => `calc(${getRandomInt(0, 80)} * 1%)`};
 `
 
 // 花びらの向きを変えるために二つ定義
-export const Petal1 = styled(Petal)`
-  border-radius: ${getRandomInt(110, 150)}% 0 ${getRandomInt(110, 150)}% 0;
-`
+// export const Petal1 = styled(Petal)`
+//   border-radius: ${getRandomInt(110, 150)}% 0 ${getRandomInt(110, 150)}% 0;
+// `
 
-export const Petal2 = styled(Petal)`
-  border-radius: 0 ${getRandomInt(110, 150)}% 0 ${getRandomInt(110, 150)}%;
-`
+// export const Petal2 = styled(Petal)`
+//   border-radius: 0 ${getRandomInt(110, 150)}% 0 ${getRandomInt(110, 150)}%;
+// `
