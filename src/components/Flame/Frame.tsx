@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { mediaQueries } from '../../utils/mediaQueries';
-import { whiteColor } from '../../variables';
+import { mainColor, whiteColor } from '../../variables';
 import { Petal } from '../animation/sakura';
 import { Container } from '../Container';
 
@@ -24,6 +24,7 @@ const Box = styled(Container)`
   padding: 20px 0;
   width: 80%;
   overflow: hidden;
+  z-index: 5;
 
   ${mediaQueries.pcSize`
     flex-direction: column;
@@ -32,6 +33,7 @@ const Box = styled(Container)`
 `;
 
 const Section = styled.section`
+  backdrop-filter: blur(12px);
   flex: 0.5;
   text-align: center;
   max-size: 50%;
