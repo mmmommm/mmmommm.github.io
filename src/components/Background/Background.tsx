@@ -1048,12 +1048,8 @@ const DotLeft = styled.div`
 
 const DotRight = styled.div`
   position: absolute;
-  ${mediaQueries.laptop`
-    right: 100px;
-    top: -200px;
-  `}
   ${mediaQueries.laptopL`
-    left: 400px;
+    left: 420px;
   `};
   &::after {
     content: "";
