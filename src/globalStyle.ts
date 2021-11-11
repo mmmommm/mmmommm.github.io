@@ -24,6 +24,9 @@ export const GlobalStyle = createGlobalStyle`
   h3 {
     font-size: 2.4rem;
     margin: 16px 0;
+    ${mediaQueries.laptop`
+      font-size: 2rem;
+    `}
   }
   h4 {
     font-size: 2.0rem;
@@ -32,6 +35,9 @@ export const GlobalStyle = createGlobalStyle`
   p, a {
     font-size: 2.0rem;
     font-weight: 100;
+    ${mediaQueries.laptop`
+      font-size: 1.6rem;
+    `}
   }
   p {
     margin: 12px 0;

@@ -37,11 +37,9 @@ const Section = styled.section`
   flex: 0.5;
   text-align: center;
   max-size: 50%;
-  z-index: 10;
-
-  ${mediaQueries.pcSize`
-    max-width: 100%;
-  `};
+  ${mediaQueries.laptop`
+    max-width: 60%;
+  `}
 `;
 
 const SectionTitle = styled.h3`
@@ -56,14 +54,15 @@ const SectionBox = styled.div`
   margin: 0 50px;
 `;
 
+// Boxの中にアニメーションを入れないと画面の最大幅がずれる
 export const Flame: React.FC<Props> = ({ title, left, right }) => (
   <>
-    <div>
-      {[...Array(29)].map((_, i) => (
-        <Petal key={i} />
-      ))}
-    </div>
     <Box className="Hero">
+      <div>
+        {[...Array(29)].map((_, i) => (
+          <Petal key={i} />
+        ))}
+      </div>
       <Section>
         <SectionTitle>{left.title}</SectionTitle>
         <SectionBox className="transition">{left.children}</SectionBox>
