@@ -16,28 +16,28 @@ jobs:
       with:
         node-version: '12.x'
 
-    # yarn install の際にキャッシュを使うよう設定
+    # npm install の際にキャッシュを使うよう設定
     - name: Cache dependencies
       uses: actions/cache@v1
       with:
         path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+        key: ${{ runner.os }}-node-${{ hashFiles('**/yarn-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
 
     - name: install
-      run: yarn install --frozen-lockfile
+      run: npm run install --frozen-lockfile
 
     # Next.jsアプリをビルドする
     # プロジェクトルート直下に.nextディレクトリができる
     - name: build
-      run: yarn build
+      run: npm run build
 
     # 静的なHTMLとしてNext.jsアプリを生成する
     # プロジェクトルート直下にoutディレクトリができる
     # そのなかに、HTMLファイル群と、それらが読み込むJSファイル群を収めた_nextディレクトリがある
     - name: export
-      run: yarn export
+      run: npm run export
 
     # しかしGitHub Pagesの仕様として_から始まるディレクトリが見えず404となる
     # つまりHTMLからJSを読み込めない
