@@ -7,8 +7,8 @@ const petalAnimation = keyframes`
   0% {
     z-index: 1;
     background-color: ${sakuraColor};
-    width: 12px;
-    height:12px;
+    width: 16px;
+    height: 16px;
     box-shadow: 0px 0px 20px ${sakuraColor};
   }
   20% {
@@ -32,8 +32,8 @@ export const Petal = styled.i`
   z-index: 1;
   color: ${sakuraColor};
   position: absolute;
-  height: 12px;
-  width: 12px;
+  height: 16px;
+  width: 16px;
   animation-name: ${petalAnimation};
   animation-delay: ${() => `${getRandomInt(0, 30)}s`};
   animation-duration: 10s;

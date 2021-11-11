@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { mediaQueries } from '../../utils/mediaQueries';
-import { mainColor, whiteColor } from '../../variables';
+import { whiteColor } from '../../variables';
 import { Petal } from '../animation/sakura';
 import { Container } from '../Container';
 
@@ -37,6 +37,7 @@ const Section = styled.section`
   flex: 0.5;
   text-align: center;
   max-size: 50%;
+  z-index: 10;
 
   ${mediaQueries.pcSize`
     max-width: 100%;
@@ -57,12 +58,12 @@ const SectionBox = styled.div`
 
 export const Flame: React.FC<Props> = ({ title, left, right }) => (
   <>
+    <div>
+      {[...Array(29)].map((_, i) => (
+        <Petal key={i} />
+      ))}
+    </div>
     <Box className="Hero">
-      <div>
-        {[...Array(29)].map((_, i) => (
-          <Petal key={i} />
-        ))}
-      </div>
       <Section>
         <SectionTitle>{left.title}</SectionTitle>
         <SectionBox className="transition">{left.children}</SectionBox>

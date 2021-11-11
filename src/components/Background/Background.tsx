@@ -8,9 +8,7 @@ export interface Props {
 
 const DotLeft = styled.div`
   position: absolute;
-  z-index: 2;
   &::after {
-    z-index: 2;
     content: "";
     position: absolute;
     top: -32px;
@@ -1051,9 +1049,7 @@ const DotLeft = styled.div`
 const DotRight = styled.div`
   position: absolute;
   left: 900px;
-  z-index: 2;
   &::after {
-    z-index: 2;
     content: "";
     position: absolute;
     top: -32px;
@@ -2124,6 +2120,7 @@ const Sakura = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
+  z-index: 3;
 `
 
 export const Background: React.VFC = () => (
