@@ -26,7 +26,7 @@ jobs:
           ${{ runner.os }}-node-
 
     - name: install
-      run: npm run install --frozen-lockfile
+      run: npm install --frozen-lockfile
 
     # Next.jsアプリをビルドする
     # プロジェクトルート直下に.nextディレクトリができる
