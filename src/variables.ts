@@ -10,4 +10,5 @@ export const tabletSize = 650;
 export const pcSize = 900;
 export const laptop = 1024;
 export const laptopL = 1440;
-export const desktop = 2560;
+export const desktop = 1920;
+export const desktopL = 2560;

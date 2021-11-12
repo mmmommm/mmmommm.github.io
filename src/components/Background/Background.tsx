@@ -1051,6 +1051,9 @@ const DotRight = styled.div`
   ${mediaQueries.laptopL`
     left: 420px;
   `};
+  ${mediaQueries.desktop`
+    left: 900px;
+  `}
   &::after {
     content: "";
     position: absolute;

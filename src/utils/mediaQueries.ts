@@ -1,5 +1,5 @@
 import { css, Interpolation } from 'styled-components';
-import { smartphoneSize, tabletSize, pcSize, laptop, laptopL, desktop } from '../variables';
+import { smartphoneSize, tabletSize, pcSize, laptop, laptopL, desktop, desktopL } from '../variables';
 
 export const mediaQueryBuilder = (size: number) => (
   strings: TemplateStringsArray,
@@ -17,4 +17,5 @@ export const mediaQueries = {
   laptop: mediaQueryBuilder(laptop),
   laptopL: mediaQueryBuilder(laptopL),
   desktop: mediaQueryBuilder(desktop),
+  desktopL: mediaQueryBuilder(desktopL)
 };
