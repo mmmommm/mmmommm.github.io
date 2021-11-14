@@ -1,13 +1,16 @@
 {
   "homepage": "http://mmmommm.github.io/me",
   "name": "mmmommm.github.io",
+  "author": "ryota kise",
+  "license": "MIT",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "fmt": "prettier --loglevel warn --write \"**/*.{js,ts,tsx,json,css}\"",
     "export": "next export"
   },
   "dependencies": {
@@ -21,8 +24,10 @@
     "autoprefixer": "^10.4.0",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "^8.3.0",
     "postcss-import": "^14.0.2",
     "postcss-url": "^10.1.3",
+    "prettier": "^2.4.1",
     "styled-components": "^5.3.1",
     "styled-reset": "^4.3.4",
     "typescript": "4.4.3"

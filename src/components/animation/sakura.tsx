@@ -2,7 +2,6 @@ import styled, { keyframes } from 'styled-components';
 import { getRandomInt } from '../../utils/getRandomInt';
 import { sakuraColor } from '../../variables';
 
-
 const petalAnimation = keyframes`
   0% {
     z-index: 1;
@@ -12,7 +11,7 @@ const petalAnimation = keyframes`
     box-shadow: 0px 0px 20px ${sakuraColor};
   }
   20% {
-    transform: translate(${getRandomInt(70, 120)}px, ${getRandomInt(10,20)}px);
+    transform: translate(${getRandomInt(70, 120)}px, ${getRandomInt(10, 20)}px);
   }
   40% {
     transform: translate(${getRandomInt(0, 60)}px, ${getRandomInt(21, 50)}px);
@@ -40,7 +39,7 @@ export const Petal = styled.i`
   animation-iteration-count: infinite;
   left: ${() => `calc(${getRandomInt(0, 100)} * 1%)`};
   top: ${() => `calc(${getRandomInt(0, 80)} * 1%)`};
-`
+`;
 
 // 花びらの向きを変えるために二つ定義
 // export const Petal1 = styled(Petal)`
