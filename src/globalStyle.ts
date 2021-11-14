@@ -4,7 +4,6 @@ import { mediaQueries } from './utils/mediaQueries';
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
-  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
   html {
     font-family: "Press Start 2P";

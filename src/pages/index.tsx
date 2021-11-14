@@ -1,6 +1,5 @@
 import React from 'react';
-import { HelmetProvider } from 'react-helmet-async';
-import { Head } from '../components/Head';
+import Head from 'next/head';
 import { App } from '../components/App';
 import { Profile } from '../components/Profile';
 import { Background } from '../components/Background';
@@ -10,13 +9,19 @@ const Index: React.VFC = () => {
   const title = "me"
   const description = "about myself"
   return (
-    <HelmetProvider>
-      <Head title={title} description={description} />
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta name="Description" content={description} />
+        <title>{title}</title>
+      </Head>
       <App>
         <Background />
         <Profile />
       </App>
-    </HelmetProvider>
+    </>
   );
 };
 
