@@ -27,25 +27,25 @@ export const Profile: React.VFC = () => {
   const current = [
     {
       i: 0,
-      name: 'undefined',
-      position: 'undefined',
-    },
+      name: "undefined",
+      position: "undefined",
+    }
   ];
   const history = [
     {
       i: 0,
-      name: 'BEENOS as Web engineer',
-      period: '2020/11',
+      name: "BEENOS as Web engineer",
+      period: "2020/11",
     },
     {
       i: 1,
-      name: 'Diverse as Data analyst',
-      period: '2021/3 - 2021/9',
+      name: "Diverse as Data analyst",
+      period: "2021/3 - 2021/9",
     },
   ];
   const sns = [
-    { url: 'https://twitter.com/kissessenose', service: 'Twitter' },
-    { url: 'https://github.com/mmmommm', service: 'Github' },
+    { url: "https://twitter.com/kissessenose", service: "Twitter" },
+    { url: "https://github.com/mmmommm", service: "Github" },
   ];
   return (
     <Container className="profile">
@@ -59,16 +59,9 @@ export const Profile: React.VFC = () => {
               <P>- A Web engineer</P>
               <P>- Interested in web front-end optimization and Javascript AST</P>
               <H3>Contact</H3>
-              <P>- omotenashikyoto2020[at]gmail.com</P>
+              <P>- ryota1839[at]gmail.com</P>
               <H3>SNS</H3>
-              <SNS>
-                {sns &&
-                  sns.map(({ url, service, i }: any) => (
-                    <Link href={url} key={i}>
-                      {service}
-                    </Link>
-                  ))}
-              </SNS>
+              <SNS>{sns && sns.map(({ url, service, i }: any) => <Link href={url} key={i}>{service}</Link>)}</SNS>
             </>
           ),
         }}

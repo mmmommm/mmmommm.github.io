@@ -8,7 +8,9 @@ export interface Props {
 }
 
 const DotLeft = styled.div`
-  position: absolute;
+  width: 50%;
+  height: 0;
+  position: relative;
   &::after {
     content: '';
     position: absolute;
@@ -385,13 +387,9 @@ const DotLeft = styled.div`
 `;
 
 const DotRight = styled.div`
-  position: absolute;
-  ${mediaQueries.laptopL`
-    left: 420px;
-  `};
-  ${mediaQueries.desktop`
-    left: 900px;
-  `}
+  width: 50%;
+  height: 0;
+  position: relative;
   &::after {
     content: "";
     position: absolute;
@@ -1431,11 +1429,16 @@ const DotRight = styled.div`
 `;
 
 const Sakura = styled.div`
-  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: raw;
   max-width: ${maxWidth};
   width: 100%;
   height: 100%;
   z-index: 3;
+  ${mediaQueries.laptop`
+    display: block;
+  `}
 `;
 
 export const Background: React.VFC = () => (
