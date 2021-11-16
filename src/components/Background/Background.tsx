@@ -387,7 +387,7 @@ const DotLeft = styled.div`
 `;
 
 const DotRight = styled.div`
-  width: 50%;
+  width: 55%;
   height: 0;
   position: relative;
   &::after {
@@ -1428,6 +1428,17 @@ const DotRight = styled.div`
   }
 `;
 
+const Trunk = styled.div`
+  display: none;
+  height: 100%;
+  width: 0;
+  right: 0;
+  position: absolute;
+  ${mediaQueries.laptopL`
+    display: block;
+  `}
+`;
+
 const Sakura = styled.div`
   display: flex;
   flex-wrap: nowrap;
@@ -1442,8 +1453,11 @@ const Sakura = styled.div`
 `;
 
 export const Background: React.VFC = () => (
-  <Sakura>
-    <DotLeft />
-    <DotRight />
-  </Sakura>
+  <>
+    <Sakura>
+      <DotLeft />
+      <DotRight />
+    </Sakura>
+    <Trunk />
+  </>
 );
