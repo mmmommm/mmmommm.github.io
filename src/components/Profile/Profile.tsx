@@ -58,6 +58,9 @@ export const Profile: React.VFC = () => {
               <H3>Ryota Kise / 21 yo</H3>
               <P>- A Web engineer</P>
               <P>- Interested in web front-end optimization and Javascript AST</P>
+              <Link href="https://docs.google.com/document/d/1vkdxn_7KCvAxzMkRXO6lUFrs3EbO4jjqU46yOR1fuqI/">
+                Resume
+              </Link>
               <H3>Contact</H3>
               <P>- ryota1839[at]gmail.com</P>
               <H3>SNS</H3>
