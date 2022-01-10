@@ -1,8 +1,8 @@
-import * as React from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 import { mediaQueries } from '../../utils/mediaQueries';
 
-export interface Props {
+interface Props {
   className?: string;
 }
 
@@ -20,6 +20,6 @@ const Section = styled.section`
   `};
 `;
 
-export const Container: React.FC<Props> = ({ children, className }) => (
+export const Container: FC<Props> = ({ children, className }) => (
   <Section className={className}>{children}</Section>
 );

@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import { mediaQueries } from './utils/mediaQueries';
+import { linkColor } from './variables';
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}

@@ -1,11 +1,11 @@
-import * as React from 'react';
+import { VFC } from 'react';
 import styled from 'styled-components';
 import { mediaQueries } from '../../utils/mediaQueries';
 import { maxWidth } from '../../variables';
 
-export interface Props {
-  className?: string;
-}
+// interface Props {
+//   className?: string;
+// }
 
 const DotLeft = styled.div`
   width: 50%;
@@ -1452,7 +1452,7 @@ const Sakura = styled.div`
   `}
 `;
 
-export const Background: React.VFC = () => (
+export const Background: VFC = () => (
   <>
     <Sakura>
       <DotLeft />

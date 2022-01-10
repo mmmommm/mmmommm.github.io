@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 import { GlobalStyle } from '../globalStyle';
 
@@ -6,7 +6,7 @@ const Container = styled.div`
   box-sizing: border-box;
 `;
 
-export const App: React.FC = ({ children }) => {
+export const App: FC = ({ children }) => {
   return (
     <>
       <GlobalStyle />

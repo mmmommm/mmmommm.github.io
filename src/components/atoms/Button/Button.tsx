@@ -1,7 +1,7 @@
-import * as React from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 
-export interface Props {
+interface Props {
   link: string;
   className?: string;
 }
@@ -42,7 +42,7 @@ const A = styled.a`
   }
 `;
 
-export const Button: React.FC<Props> = ({ link, children, className }) => (
+export const Button: FC<Props> = ({ link, children, className }) => (
   <A rel="noopener" href={link} target="_blank" className={className}>
     {children}
   </A>

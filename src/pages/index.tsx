@@ -1,10 +1,10 @@
-import * as React from 'react';
+import { VFC } from 'react';
 import Head from 'next/head';
 import { App } from '../components/App';
 import { Profile } from '../components/Profile';
 import { Background } from '../components/Background';
 
-const Index: React.VFC = () => {
+const Index: VFC = () => {
   const title = 'me';
   const description = 'about myself';
   return (

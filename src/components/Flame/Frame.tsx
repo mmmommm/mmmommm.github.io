@@ -1,19 +1,19 @@
-import * as React from 'react';
+import { FC, ReactNode } from 'react';
 import styled from 'styled-components';
 import { mediaQueries } from '../../utils/mediaQueries';
 import { whiteColor } from '../../variables';
 import { Petal } from '../animation/sakura';
 import { Container } from '../Container';
 
-export interface Props {
+interface Props {
   title: string;
   left: {
     title: string;
-    children: React.ReactNode;
+    children: ReactNode;
   };
   right: {
     title: string;
-    children: React.ReactNode;
+    children: ReactNode;
   };
 }
 
@@ -55,7 +55,7 @@ const SectionBox = styled.div`
 `;
 
 // Boxの中にアニメーションを入れないと画面の最大幅がずれる
-export const Flame: React.FC<Props> = ({ title, left, right }) => (
+export const Flame: FC<Props> = ({ title, left, right }) => (
   <>
     <Box className="Hero">
       <div>

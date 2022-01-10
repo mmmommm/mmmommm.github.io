@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { VFC } from 'react';
 import styled from 'styled-components';
 import { Container as ContainerComponent } from '../Container';
 import { mainColor, whiteColor, blackColor } from '../../variables';
@@ -17,13 +17,14 @@ const SNS = styled.div`
 const P = styled.p`
   color: ${mainColor};
   margin: 0 0 4px;
+  font-size: 16px;
 `;
 
 const H3 = styled.h3`
   color: ${whiteColor};
 `;
 
-export const Profile: React.VFC = () => {
+export const Profile: VFC = () => {
   const current = [
     {
       i: 0,
@@ -42,6 +43,11 @@ export const Profile: React.VFC = () => {
       name: 'Diverse as Data analyst',
       period: '2021/3 - 2021/9',
     },
+    {
+      i: 2,
+      name: "CyberAgent as Front end engineer",
+      period: "2022/1"
+    }
   ];
   const sns = [
     { url: 'https://twitter.com/kissessenose', service: 'Twitter' },
@@ -56,10 +62,10 @@ export const Profile: React.VFC = () => {
           children: (
             <>
               <H3>Ryota Kise / 21 yo</H3>
-              <P>- A Web engineer</P>
-              <P>- Interested in web front-end optimization and Javascript AST</P>
+              <P>- A web engineer</P>
+              <P>- Interested in web front-end ecosystem and optimization</P>
               <Link href="https://docs.google.com/document/d/1vkdxn_7KCvAxzMkRXO6lUFrs3EbO4jjqU46yOR1fuqI/">
-                Resume
+                Here is my resume
               </Link>
               <H3>Contact</H3>
               <P>- ryota1839[at]gmail.com</P>
