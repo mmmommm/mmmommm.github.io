@@ -28,8 +28,8 @@ export const Profile: VFC = () => {
   const current = [
     {
       i: 0,
-      name: 'undefined',
-      position: 'undefined',
+      name: 'CyberAgent',
+      position: 'Back end Engineer',
     },
   ];
   const history = [
@@ -47,6 +47,11 @@ export const Profile: VFC = () => {
       i: 2,
       name: "CyberAgent as Front end engineer",
       period: "2022/1"
+    },
+    {
+      i: 3,
+      name: "CyberAgent as Back end engineer",
+      period: "2022/2"
     }
   ];
   const sns = [
