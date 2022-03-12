@@ -1,8 +1,6 @@
 # me
 ## プロフィール
-きせ　りょうた
-吉瀬　遼太
-kise ryota
+吉瀬　遼太(kise ryota) 22歳
 
 ### 得意な技術
 - TypeScript関連
