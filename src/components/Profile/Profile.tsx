@@ -45,12 +45,12 @@ export const Profile: VFC = () => {
     },
     {
       i: 2,
-      name: "CyberAgent as Front end engineer",
+      name: "CyberAgent as Frontend engineer",
       period: "2022/1"
     },
     {
       i: 3,
-      name: "CyberAgent as Back end engineer",
+      name: "CyberAgent as Backend engineer",
       period: "2022/2"
     }
   ];
@@ -67,8 +67,8 @@ export const Profile: VFC = () => {
           children: (
             <>
               <H3>Ryota Kise / 21 yo</H3>
-              <P>- A web engineer</P>
-              <P>- Interested in web front-end ecosystem and optimization</P>
+              <P>- A web application engineer</P>
+              <P>- Interested in web ecosystem</P>
               <Link href="https://docs.google.com/document/d/1vkdxn_7KCvAxzMkRXO6lUFrs3EbO4jjqU46yOR1fuqI/">
                 Here is my resume
               </Link>
