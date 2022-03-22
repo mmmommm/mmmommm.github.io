@@ -1,0 +1,26 @@
+query getProfileData {
+  dataJson {
+    jobs {
+      current {
+        name
+        position
+        url
+      }
+      history {
+        main {
+          name
+          period
+        }
+        side {
+          name
+          period
+        }
+      }
+    }
+    sns {
+      service
+      url
+      color
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "sns": [
+    {
+      "service": "GitHub",
+      "name": "mmmommm",
+      "url": "https://github.com/mmmommm",
+      "color": "#767676"
+    },
+    {
+      "service": "Twitter",
+      "name": "kissessenose",
+      "url": "https://twitter.com/kissessenose",
+      "color": "#00aced"
+    },
+    {
+      "service": "LinkedIn",
+      "name": "Kise Ryota",
+      "url": "https://www.linkedin.com/in/kise-ryota-361384226/"
+    }
+  ],
+  "jobs": {
+    "current": [
+      {
+        "name": "Cyberagent, Inc.",
+        "position": "a web developer"
+      }
+    ],
+    "history": {
+      "main": [
+        {
+          "name": "Diverse, Inc.",
+          "position": "a data analyst"
+        },
+        {
+          "name": "BEENOS, Inc.",
+          "position": "a web developer"
+        }
+      ],
+      "side": []
+    }
+  },
+  "materials": {
+    "slides": [
+      {
+        "text": "Introduce the new ESM implementation of Node.js",
+        "link": "https://slides.hiroppy.me/node-esm/"
+      },
+      {
+        "text": "webpack の イママデ と コレカラ",
+        "link": "https://slides.hiroppy.me/webpack-history"
+      },
+      {
+        "text": "the present and future of JavaScript",
+        "link": "https://slides.hiroppy.me/the-present-and-future-of-JavaScript/"
+      },
+      {
+        "text": "The event loop of node",
+        "link": "https://slides.hiroppy.me/the-event-loop-of-node"
+      },
+      {
+        "text": "performance timing api with node.js",
+        "link": "http://slides.hiroppy.me/performance-timing-api-with-node.js/"
+      },
+      {
+        "text": "worker_threads",
+        "link": "https://slides.hiroppy.me/worker_threads/"
+      },
+      {
+        "text": "how to manage the document of Node.js",
+        "link": "http://slides.hiroppy.me/how-to-manage-the-document-of-Node.js/"
+      }
+    ],
+    "articles": [
+      {
+        "text": "SPA + SSR + PWA の作り方とセキュリティについて",
+        "link": "https://blog.hiroppy.me/entry/ssr-sample_2"
+      },
+      {
+        "text": "module bundlerの作り方(準備編)",
+        "link": "https://blog.hiroppy.me/entry/create-module-bundler-preparation"
+      },
+      {
+        "text": "webpackの仕組みを簡潔に説明する",
+        "link": "https://blog.hiroppy.me/entry/mechanism-of-webpack"
+      },
+      {
+        "text": "Node.jsでのイベントループの仕組みとタイマーについて",
+        "link": "https://blog.hiroppy.me/entry/nodejs-event-loop"
+      },
+      {
+        "text": "Node.jsのアプリケーションデバッグ・改善方法をおさらいする",
+        "link": "https://blog.hiroppy.me/entry/nodejs-performance"
+      },
+      {
+        "text": "Node.jsのパフォーマンスチューニングのtips",
+        "link": "http://blog.hiroppy.me/entry/2017/11/06/095943"
+      },
+      {
+        "text": "OSSの現状と今後",
+        "link": "https://blog.hiroppy.me/entry/current-status-and-future-of-oss"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+type DataJson {
+  sns: [SNS!]!
+  jobs: Job!
+}
+
+type SNS {
+  service: String!
+  name: String!
+  url: String!
+  color: String!
+}
+
+type Job {
+  current: [CurrentJob!]!
+  history: [HistoryJob!]!
+}
+
+type CurrentJob {
+  name: String!
+  position: String!
+}
+
+type HistoryJob {
+  name: String!
+  position: String!
+}
