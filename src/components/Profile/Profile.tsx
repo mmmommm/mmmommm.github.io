@@ -4,6 +4,10 @@ import { Container as ContainerComponent } from '../Container';
 import { mainColor, whiteColor, blackColor } from '../../variables';
 import { Link } from '../atoms/Link';
 import { Flame } from '../Flame';
+import {
+  gql,
+  useQuery,
+} from "@apollo/client";
 
 const Container = styled(ContainerComponent)`
   background: ${blackColor};
@@ -24,40 +28,75 @@ const H3 = styled.h3`
   color: ${whiteColor};
 `;
 
-export const Profile: VFC = () => {
-  const current = [
-    {
-      i: 0,
-      name: 'CyberAgent',
-      position: 'Back end Engineer',
-    },
-  ];
-  const history = [
-    {
-      i: 0,
-      name: 'BEENOS as Web engineer',
-      period: '2020/11',
-    },
-    {
-      i: 1,
-      name: 'Diverse as Data analyst',
-      period: '2021/3 - 2021/9',
-    },
-    {
-      i: 2,
-      name: "CyberAgent as Frontend engineer",
-      period: "2022/1"
-    },
-    {
-      i: 3,
-      name: "CyberAgent as Backend engineer",
-      period: "2022/2"
+const query = gql`
+  query {
+    dataJson {
+      jobs {
+        current {
+          name
+          position
+          url
+        }
+        history {
+          main {
+            name
+            period
+          }
+          side {
+            name
+            period
+          }
+        }
+      }
+      sns {
+        service
+        url
+        color
+      }
     }
-  ];
-  const sns = [
-    { url: 'https://twitter.com/kissessenose', service: 'Twitter' },
-    { url: 'https://github.com/mmmommm', service: 'Github' },
-  ];
+  }
+`;
+
+export const Profile: VFC = () => {
+  // const current = [
+  //   {
+  //     i: 0,
+  //     name: 'CyberAgent',
+  //     position: 'Back end Engineer',
+  //   },
+  // ];
+  // const history = [
+  //   {
+  //     i: 0,
+  //     name: 'BEENOS as Web engineer',
+  //     period: '2020/11',
+  //   },
+  //   {
+  //     i: 1,
+  //     name: 'Diverse as Data analyst',
+  //     period: '2021/3 - 2021/9',
+  //   },
+  //   {
+  //     i: 2,
+  //     name: "CyberAgent as Frontend engineer",
+  //     period: "2022/1"
+  //   },
+  //   {
+  //     i: 3,
+  //     name: "CyberAgent as Backend engineer",
+  //     period: "2022/2"
+  //   }
+  // ];
+  // const sns = [
+  //   { url: 'https://twitter.com/kissessenose', service: 'Twitter' },
+  //   { url: 'https://github.com/mmmommm', service: 'Github' },
+  // ];
+  const { loading, error, data } = useQuery(query);
+  const { current, history } = data?.jobs!;
+
+  if (loading) console.log('Loading...');
+  if (error) console.log(`Error! ${error.message}`);
+
   return (
     <Container className="profile">
       <Flame
@@ -76,8 +115,8 @@ export const Profile: VFC = () => {
               <P>- ryota1839[at]gmail.com</P>
               <H3>SNS</H3>
               <SNS>
-                {sns &&
-                  sns.map(({ url, service, i }: any) => (
+                {data.sns &&
+                  data.sns.map(({ url, service, i }: any) => (
                     <Link href={url} key={i}>
                       {service}
                     </Link>
@@ -98,7 +137,7 @@ export const Profile: VFC = () => {
                   </P>
                 ))}
               <H3>History</H3>
-              {history?.map(({ name, period, i }: any) => (
+              {history.map(({ name, period, i }: any) => (
                 <P key={i}>
                   - {period} : {name}
                 </P>
