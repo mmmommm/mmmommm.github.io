@@ -1,4 +1,4 @@
-query getProfileData {
+query getProfile {
   dataJson {
     jobs {
       current {

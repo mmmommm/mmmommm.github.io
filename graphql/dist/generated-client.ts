@@ -36,6 +36,11 @@ export type Job = {
   history: Array<HistoryJob>;
 };
 
+export type Query = {
+  __typename?: 'Query';
+  dataJson: DataJson;
+};
+
 export type Sns = {
   __typename?: 'SNS';
   color: Scalars['String'];

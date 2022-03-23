@@ -24,3 +24,7 @@ type HistoryJob {
   name: String!
   position: String!
 }
+
+type Query {
+  dataJson: DataJson!
+}
